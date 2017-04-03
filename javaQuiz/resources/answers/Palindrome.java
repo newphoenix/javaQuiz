@@ -1,4 +1,5 @@
-package com.quiz;
+import java.util.Arrays;
+import java.util.List;
 
 public class Palindrome {
 	
@@ -14,5 +15,18 @@ public class Palindrome {
 	    }
 	    return true;
 	}
+	
+	
+	// the first 5 strings are Palindrome, the last 2 are not.
+	private static List<String> WORD_LIST = Arrays.asList("noon","level","Refer","Anna","121121","lambda","water");
+	
+	public static void main(String[] args){
+		
+		for(String word : WORD_LIST){
+		boolean result = isPalindrom(word.toLowerCase().toCharArray());
+		System.out.println(result);
+	}
+
+}
 
 }
