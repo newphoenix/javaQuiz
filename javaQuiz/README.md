@@ -204,6 +204,9 @@ Example: 1221 is a palindrome but not 1121.
 **Answer:**
 
 ```java
+import java.util.Arrays;
+import java.util.List;
+
 public class Palindrome {
 	
 	public static boolean isPalindrom(char[] charArray){
@@ -218,7 +221,22 @@ public class Palindrome {
 	    }
 	    return true;
 	}
+	
+	
+	// the first 5 strings are Palindrome, the last 2 are not.
+	private static List<String> WORD_LIST = Arrays.asList("noon","level","Refer","Anna","121121","lambda","water");
+	
+	public static void main(String[] args){
+		
+		for(String word : WORD_LIST){
+		boolean result = isPalindrom(word.toLowerCase().toCharArray());
+		System.out.println(result);
+	}
+
 }
+
+}
+
 ```
 
 
@@ -300,6 +318,9 @@ public class ComplementaryPairs {
 Given a large file that does not fit in memory (say 10GB), find the top 100000 most frequent phrases. The file has 50 phrases per line separated by a pipe (|). Assume that the phrases do not contain pipe.
 Example line may look like: Foobar Candy | Olympics 2012 | PGA | CNET | Microsoft Bing .... The above line has 5 phrases in visible region.
 
+**NOTE:** 
+   Runnig the code below allocates 100MB of memory, using java 8 streaming allocated 150MB of memory when running the program. file lines.txt can be used
+   to test the code and it is included in folder tests.
 
 
 **Answer:**
