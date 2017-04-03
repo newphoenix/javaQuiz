@@ -1,0 +1,8 @@
+ To run the program:
+    1. compile javac TopPhrases.java
+	2. copy file lines.txt from test to answers dirctory.
+	3. run java TopPhrases
+	4. output on console is done and the results will be written to file named output.txt same directory where TopPhrases.class is.
+	
+Note: change inputFileName and outFileName in TopPhrases.java as required, or pass file path as an argument,
+   	  the question said nothing about how to treat the file path.

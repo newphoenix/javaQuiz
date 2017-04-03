@@ -1,0 +1,2 @@
+ Main method included in Palindrome.java ready for compiling and running. 
+ 
